@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 5px 40px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}

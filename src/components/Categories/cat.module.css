@@ -1,0 +1,24 @@
+.secondMain {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 150px;
+    background-color: #0e2e56d3;
+    transition: 0.250ms;
+}
+
+.list {
+    list-style: none;
+    font-size: large;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.250ms;
+    text-decoration: none;
+}
+
+.list:hover {
+    color: #ef435ccc;
+    transform: scale(1.3);
+    transition: 0.4s;
+}

@@ -1,0 +1,75 @@
+body {
+  font-family: Arial;
+}
+.login {
+  margin: 20px auto;
+  width: 300px;
+}
+.loginScreen {
+  margin-top: 120px;
+  background-color: #00c024;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.appTitle {
+  text-align: center;
+  color: whitesmoke;
+  padding-bottom: 20px;
+  font-size: 13px;
+}
+
+.loginForm {
+  text-align: center;
+}
+
+.loginField {
+  text-align: center;
+  background-color: #ecf0f1;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 200;
+  padding: 10px 0;
+  width: 250px;
+  transition: border 0.5s;
+}
+
+.loginField:focus {
+  border: 2px solid #3498db;
+  box-shadow: none;
+}
+
+.btn {
+  border: 2px solid transparent;
+  background: #3498db;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+.loginLink {
+  font-size: 12px;
+  color: whitesmoke;
+  display: block;
+  margin-top: 7px;
+}
+#loginPass {
+  margin-bottom: 15px;
+}
