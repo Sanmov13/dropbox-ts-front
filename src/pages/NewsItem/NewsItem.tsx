@@ -10,6 +10,27 @@ import {
   fetchComments,
 } from "../../features/commentSlice";
 import { Dna } from "react-loader-spinner";
+import styled from "styled-components";
+import { Props } from "../../components/Header/Header";
+
+const ButtonStyled = styled.button<Props>`
+  width: 20%;
+  padding: 20px;
+  margin-top: 20px;
+  border: none;
+  background-color: #3c5779;
+  color: ${(props) => props.color || "#fff"};
+  font-size: larger;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0e2f56;
+  }
+
+  &:focus {
+    transform: scale(1.03);
+  }
+`;
 
 interface News {
   _id: string;
@@ -137,9 +158,9 @@ const NewsItem: React.FC = () => {
                 value={input}
                 onChange={handleChange}
               />
-              <button disabled={!input} onClick={handleAdd}>
+              <ButtonStyled disabled={!input} onClick={handleAdd}>
                 Написать
-              </button>
+              </ButtonStyled>
             </div>
             <hr className={styles.siz2} />
           </div>

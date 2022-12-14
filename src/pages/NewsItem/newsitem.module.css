@@ -134,16 +134,16 @@
   border: 1px solid silver;
 }
 
-.comments > button {
+/* .comments > button {
   width: 20%;
   padding: 20px;
   margin-top: 20px;
   border: none;
-  background-color: #0e2f56;
+  background-color: #3c5779;
   color: #fff;
   font-size: larger;
   cursor: pointer;
-}
+} */
 
 .siz2 {
   width: 900px;

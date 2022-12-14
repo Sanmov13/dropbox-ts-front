@@ -8,6 +8,38 @@ import { fetchCategories } from "../../features/categoriesSlice";
 import Categories from "../Categories/Categories";
 import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../hooks";
+import styled from "styled-components";
+
+export interface Props {
+  height?: string;
+  display?: string;
+  justifyContent?: string
+}
+
+const MainStyled = styled.div<Props>`
+  display: flex;
+  background-color: azure;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 150px;
+  width: 100wv;
+  height: ${(props) => props.height || '70px'};
+`;
+
+const LinkStyled = styled(Link)`
+  border: none;
+  background-color: unset;
+  color: #0e2f56;
+  cursor: pointer;
+  text-decoration: none;
+  height: 10px;
+`;
+
+const MainImageStyled = styled.div<Props>`
+  display: flex;
+  justify-content: ${props => props.justifyContent || 'space-between'};
+  width: 200px;
+`;
 
 const Header: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -26,26 +58,26 @@ const Header: React.FC = () => {
     <div className={styles.main}>
       <div className={styles.entry}>
         {token ? (
-          <Link onClick={handleExit} className={styles.enter} to="/">
+          <LinkStyled onClick={handleExit} to="/">
             Выход
-          </Link>
+          </LinkStyled>
         ) : (
-          <Link className={styles.enter} to="/auth">
+          <LinkStyled to="/auth">
             Вход/Регистрация
-          </Link>
+          </LinkStyled>
         )}
       </div>
-      <div className={styles.main1}>
+      <MainStyled height="75px">
         <h2 className={styles.title}>
           <span>ALL</span> NEWS
         </h2>
-        <div className={styles.mainImage}>
+        <MainImageStyled>
           <img src={img1} alt="tg" className={styles.imageList} />
           <img src={img2} alt="vk" className={styles.imageList} />
           <img src={img3} alt="whatsapp" className={styles.imageList} />
           <img src={img4} alt="youtube" className={styles.imageList} />
-        </div>
-      </div>
+        </MainImageStyled>
+      </MainStyled>
       <Categories />
     </div>
   );

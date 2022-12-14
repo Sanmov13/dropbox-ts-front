@@ -3,6 +3,17 @@ import { fetchCategories } from "../../features/categoriesSlice";
 import styles from "../Categories/cat.module.css";
 import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../hooks";
+import styled from "styled-components";
+
+const CategoriesStyled = styled.div`
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 150px;
+  background-color: #0e2e56d3;
+  transition: 0.25ms;
+`;
 
 interface Category {
   _id: string;
@@ -20,7 +31,7 @@ const Categories: React.FC = () => {
   }, [dispatch]);
 
   return (
-    <div className={styles.secondMain}>
+    <CategoriesStyled>
       <Link to="/" className={styles.list}>
         Главная
       </Link>
@@ -31,7 +42,7 @@ const Categories: React.FC = () => {
           </Link>
         );
       })}
-    </div>
+    </CategoriesStyled>
   );
 };
 
